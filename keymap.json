@@ -6,42 +6,46 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-    {
-        "context": "Workspace",
-        "bindings": {
-            // "shift shift": "file_finder::Toggle"
-        }
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
     },
-    {
-        "context": "Editor && vim_mode == insert",
-        "bindings": {
-            "shift-tab": "editor::AcceptEditPrediction"
-        }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "shift-tab": "editor::AcceptEditPrediction",
     },
-    {
-        "context": "Editor && vim_mode == normal",
-        "bindings": {
-            "space space": "file_finder::Toggle",
-            "space b": "tab_switcher::Toggle",
-            "space /": "workspace::NewSearch",
-            "space f s": "workspace::Save",
-            "space f w": "workspace::SaveWithoutFormat",
-            "space f a": "workspace::SaveAll",
-            "space f f": "editor::Format",
-            "space v s": "workspace::ToggleLeftDock",
-            "space v f": "pane::RevealInProjectPanel",
-            "space c a": "editor::ToggleCodeActions",
-            "space c r": "editor::Rename",
-            "space c c": "editor::ToggleComments",
-            "space t o": "workspace::CloseInactiveTabsAndPanes"
-        }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space b": "tab_switcher::Toggle",
+      "space /": "workspace::NewSearch",
+      "space f s": "workspace::Save",
+      "space f w": "workspace::SaveWithoutFormat",
+      "space f a": "workspace::SaveAll",
+      "space f f": "editor::Format",
+      "space v s": "workspace::ToggleLeftDock",
+      "space v f": "pane::RevealInProjectPanel",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space c c": "editor::ToggleComments",
+      "space t o": "workspace::CloseInactiveTabsAndPanes",
+      "ctrl-shift-v": "editor::Paste",
     },
-    {
-        "context": "Editor && vim_mode == visual",
-        "bindings": {
-            "space c c": "editor::ToggleComments",
-            "space s c": "editor::Copy",
-            "shift-s": ["vim::PushAddSurrounds", {}]
-        }
-    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "space c c": "editor::ToggleComments",
+      "shift-y": [
+        "action::Sequence",
+        ["editor::Copy", "vim::SwitchToNormalMode"],
+      ],
+      "shift-s": ["vim::PushAddSurrounds", {}],
+    },
+  },
 ]
