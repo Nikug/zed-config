@@ -35,6 +35,7 @@
       "space c c": "editor::ToggleComments",
       "space t o": "workspace::CloseInactiveTabsAndPanes",
       "ctrl-shift-v": "editor::Paste",
+      "g i": "editor::GoToImplementation",
     },
   },
   {
